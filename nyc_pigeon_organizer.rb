@@ -6,10 +6,10 @@ def nyc_pigeon_organizer(data)
     info_hash.each do |category, names_array|
       names_array.each do |name|
       pigeon_list[name] = {csl => []}
-      if names_array.include?(name) &&
+      if names_array.include?(name)
         
         pigeon_list[name][csl] << category
-        binding.pry
+        
       end
       end
     end
