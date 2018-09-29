@@ -8,6 +8,7 @@ def nyc_pigeon_organizer(data)
         pigeon_list[name] = {csl => []}
         if pigeon_list[name].include?(csl)
           pigeon_list[name][csl] << category
+          binding.pry
         else
         pigeon_list[name][csl] = []     
         pigeon_list[name][csl] << category
