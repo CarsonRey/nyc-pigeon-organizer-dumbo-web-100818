@@ -12,7 +12,7 @@ def nyc_pigeon_organizer(data)
          
         else
         pigeon_list[name][csl] = []     
-        pigeon_list[name][csl] << category
+        pigeon_list[name][csl] << category.to_s
         end
       end
     end
