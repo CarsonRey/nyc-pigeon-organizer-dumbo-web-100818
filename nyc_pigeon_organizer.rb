@@ -5,7 +5,6 @@ def nyc_pigeon_organizer(data)
   data.each do |csl, info_hash|
     info_hash.each do |category, names_array|
       names_array.each do |name|
-        pigeon_list[name] = {csl => []}
         if pigeon_list[name].include?(csl)
           pigeon_list[name][csl] << category.to_s
           binding.pry
