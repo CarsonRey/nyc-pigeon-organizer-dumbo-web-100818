@@ -7,7 +7,7 @@ def nyc_pigeon_organizer(data)
       names_array.each do |name|
         pigeon_list[name] = {}
       if names_array.include?(name) &&
-        if pigeon_list[name][csl]
+        if pigeon_list[name][csl] == 
        
       end
       end
