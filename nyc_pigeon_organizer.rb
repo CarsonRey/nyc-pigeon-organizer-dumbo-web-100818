@@ -8,7 +8,7 @@ def nyc_pigeon_organizer(data)
       names_array.each do |name|
         if pigeon_list[name] == nil
            pigeon_list[name] = {csl => []}
-           pigeon_list[name] << category.to_s
+           pigeon_list[name][csl] << category.to_s
         else
           if pigeon_list[name].include?(csl)
             pigeon_list[name][csl] << category.to_s
