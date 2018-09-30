@@ -1,25 +1,13 @@
 require 'pry'
 
 
-def get_colors(data)
-  data.collect do |csl, info_hash|
-    info_hash.collect do |category, names_array|
-      names_array.collect do |name|
-        if names_array.include?(name)
-          category
-        end
-      end
-    end
-  end
-end
-
 def nyc_pigeon_organizer(data)
   pigeon_list = {}
   data.each do |csl, info_hash|
     info_hash.each do |category, names_array|
       names_array.each do |name|
         if pigeon_list[name] == nil
-           pigeon_list[name] = {}
+           pigeon_list[name] = {csl => []}
         else
           if pigeon_list[name].include?(csl)
             pigeon_list[name][csl] << category.to_s
