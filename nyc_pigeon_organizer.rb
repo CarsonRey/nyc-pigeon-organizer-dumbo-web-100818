@@ -5,14 +5,15 @@ def nyc_pigeon_organizer(data)
   data.each do |csl, info_hash|
     info_hash.each do |category, names_array|
       names_array.each do |name|
-      
+        if pigeon_list[name] == nil
         pigeon_list[name] = {}
-        if pigeon_list[name].include?(csl)
-          pigeon_list[name][csl] << category.to_s
-         
         else
-        pigeon_list[name][csl] = []     
-        pigeon_list[name][csl] << category.to_s
+          if pigeon_list[name].include?(csl)
+            pigeon_list[name][csl] << category.to_s
+           
+          else
+          pigeon_list[name][csl] = []     
+          pigeon_list[name][csl] << category.to_s
         end
       end
     end
